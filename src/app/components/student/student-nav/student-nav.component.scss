@@ -1,0 +1,40 @@
+nav{
+    height:80px;
+    background-color:#00004d;
+}
+
+.body{
+    background-color:#DAE8FC;
+}
+
+.nav-app-icon{
+
+    border-radius: 7px;
+    border-color: lightseagreen;
+}
+
+.dropdown-menu{
+    min-width: 9rem;
+    background-color: #00004d;
+  
+}
+
+.dropdown-item{
+
+    color: white;
+}
+
+.dropdown-menu:hover .dropdown-item{
+    background-color:#00004d;
+}
+
+
+.dropdown-toggle::after {
+ border-top:0em;
+}
+
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: .5rem;
+    padding-left: 1.5rem;
+}}

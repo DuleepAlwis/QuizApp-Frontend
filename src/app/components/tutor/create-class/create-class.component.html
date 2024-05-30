@@ -1,0 +1,84 @@
+<app-tutor-nav></app-tutor-nav>
+<div class="container-fluid">
+  <div style="margin-left:15%;margin-top:20px;margin-bottom: 20px;">
+  </div>
+  <div class="class-view">
+    <div class="form_outer">
+      <h1 style="text-align: center;">Class details</h1>
+
+      <div class="form_inner">
+        <form #class_form="ngForm" (ngSubmit)="save(class_form)">
+          <mat-form-field class="example-full-width">
+            <mat-label>Class Name : </mat-label>
+            <input matInput #input_name [(ngModel)]="className" name="className" required />
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Description</mat-label>
+            <textarea matInput #input_description [(ngModel)]="description" name="description" placeholder="..."
+              required></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Number of Quizzes</mat-label>
+            <input matInput #input_quizzes [(ngModel)]="quizNumber" name="quizNumber" type="number" required />
+          </mat-form-field>
+
+
+          <div class="bottom_area">
+            <hr/>
+            <button type="submit" mat-raised-button color="primary" title="Save"><i class="fa fa-save"></i></button>
+            <button type="reset" mat-raised-button color="primary" title="Reset" (click)="reset(class_form)" class="ml-3"><i class="fa fa-undo"></i></button>
+
+          </div>
+        </form>
+
+        
+      </div>
+      <!-- <div class="class_indicators">
+        <ul>
+          <li style="text-decoration: none;">
+            <div style="display: inline-block;">
+              <span style="width:50px;height: 50px;background-color: green;"></span><span style="width:100px;height: 50px;color:black">Performance for quizzes is good</span>
+
+            </div>
+          </li>
+        </ul>
+      </div> -->
+      <div class="quiz_list">
+
+        <div>
+          <b>Quiz List</b>
+          <hr />
+          <div class="quiz_list_outer">
+            <div *ngIf="quizList.length>0" class="quiz_list_inner">
+              <mat-list role="list">
+
+                <mat-list-item role="listitem" *ngFor="let q of quizList">
+
+
+                  <span style="display: inline-block;" class="mt-3">{{q.name}} | Questions {{q.number_of_question}} <i
+                      class="fa fa-eye ml-3 mr-3" title="View"></i> <button mat-button color="warn"><i
+                        class="fa fa-remove mr-3"></i></button></span>
+                  <hr />
+
+
+                </mat-list-item>
+              </mat-list>
+            </div>
+          </div>
+
+        </div>
+
+
+        
+      </div>
+   
+    </div>
+   
+  </div>
+  <div class="side-list-view">
+    <app-quiz-quiestions-list [entity_name]="entity_name"></app-quiz-quiestions-list>
+  </div>
+
+</div>

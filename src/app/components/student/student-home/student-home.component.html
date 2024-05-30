@@ -1,0 +1,18 @@
+<app-student-nav></app-student-nav>
+<div class="container-fluid">
+  <div style="margin-left:35%;margin-top:5px">
+    <h3></h3>
+  </div>
+  <div class="class-view">
+    <div *ngFor="let cls of classArr" class="class-card">
+      <app-list-quiz-class [role]="role" [type]="type" [entity_name]="cls.name" [entity_id]="cls.id"></app-list-quiz-class>
+    </div>
+    <div class="pagination-numbers">
+      <button *ngFor="let btn of number_of_btn">{{btn}}</button>
+    </div>
+  </div>
+  <div class="side-list-view">
+    <app-student-classroom></app-student-classroom>
+  </div>
+  
+</div>

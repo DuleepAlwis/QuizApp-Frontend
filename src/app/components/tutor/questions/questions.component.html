@@ -1,0 +1,112 @@
+<app-tutor-nav></app-tutor-nav>
+<div class="container-fluid">
+  <div style="margin-left:15%;margin-top:20px;margin-bottom: 20px;">
+  </div>
+  <div class="class-view">
+    <div class="form_outer">
+      <h1 style="text-align: center;">Question Form</h1>
+
+      <div class="form_inner">
+        <form #question_form="ngForm" (ngSubmit)="save(question_form)">
+          <mat-form-field class="example-full-width">
+            <mat-label>Question text : </mat-label>
+            <input matInput #input_text [(ngModel)]="q_text" name="q_text" required />
+          </mat-form-field>
+
+        
+          <div class="answer_box">
+            Add an answer <button type="button" mat-button color="accent" style="border-radius: 13px;" (click)="addAnswer()"><i class="fa fa-plus-square fa-2x" data-bs-toggle="tooltip" data-bs-placement="top" title="Add an answer" aria-hidden="true"></i></button>
+          
+            <div class="row">
+              <div *ngFor="let ans of ansList;let i = index" class="col-md-5 mt-3 ml-1">
+                {{i+1}} . <input type="text" class="mr-1" [(ngModel)]="ans.text" [ngModelOptions]="{standalone:true}"/><button  mat-button color="accent" style="border-radius: 13px;" (click)="removeAnswer(i)"><i class="fa fa-close fa-2x" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove the answer" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          
+          </div>
+
+          <mat-form-field style="width:40%">
+            <mat-label>Weight</mat-label>
+            <input matInput #input_weight [(ngModel)]="weight" name="weight" type="number" required />
+          </mat-form-field>
+          <br/>
+
+          <mat-form-field style="width:40%">
+            <mat-label>Correct answer</mat-label>
+            <!-- <input matInput #input_canswer [(ngModel)]="c_answer" name="c_answer" type="number" min="1" [max]="this.ansList.length" required /> -->
+            <!-- <select #input_canswer [(ngModel)]="c_answer" name="c_answer">
+              <option *ngFor = "let ans of ansList" value="{{ans.label}}">
+                {{ans.label}}
+              </option>
+            </select> -->
+            <mat-select #input_canswer [(ngModel)]="c_answer" name="c_answer" required>
+              <mat-option *ngFor = "let ans of ansList" value="{{ans.label}}">
+                {{ans.label}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+
+          <div class="bottom_area">
+            <hr/>
+            <button type="submit" mat-raised-button color="primary" title="Save"><i class="fa fa-save"></i></button>
+            <button type="reset" mat-raised-button color="primary" title="Reset" (click)="reset(question_form)" class="ml-3"><i class="fa fa-undo"></i></button>
+
+          </div>
+        </form>
+
+        
+      </div>
+      <!-- <div class="class_indicators">
+        <ul>
+          <li style="text-decoration: none;">
+            <div style="display: inline-block;">
+              <span style="width:50px;height: 50px;background-color: green;"></span><span style="width:100px;height: 50px;color:black">Performance for quizzes is good</span>
+
+            </div>
+          </li>
+        </ul>
+      </div> -->
+     
+   
+    </div>
+   
+  </div>
+  <div class="side-list-view">
+    <div class="class-rooms-outer">
+      <span> <i class="fa fa-clipboard fa-2x mr-1 ml-1 mt-1" aria-hidden="true"></i>Question List</span>
+      <div>
+    
+      </div>
+      <div class="class-rooms-inner">
+    
+          <hr />
+       
+              <mat-list role="list">
+    
+                  <mat-list-item role="listitem" *ngFor="let q of questionList;let i=index">
+                      <div style="width:100%;margin:5px;height:100%;padding: 3px;color:white">
+                         
+                          <!-- <i *ngIf="entity_name=='Quizzes'" class="fa fa-clipboard fa-1x mr-1" aria-hidden="true"></i>{{q.name}} quiz has {{q.number_of_question}} questions with {{q.studentList ==null ?0:q.studentList.length}} students<span class="ml-2"><button  mat-button color="accent" style="border-radius: 7px;"><i class="fa fa-plus-square fa-1x" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to the class" aria-hidden="true"></i></button></span> -->
+                          <!-- <span class="ml-2"><i class="fa fa-clipboard fa-1x mr-1" aria-hidden="true"></i>
+                          {{q.name}} quiz has {{q.number_of_question}} questions with {{q.studentList ==null ?0:q.studentList.length}} students
+                        </span> 
+                              <span class="ml-2">
+                                <button mat-mini-fab color="accent" aria-label="Add quiz to the class">
+                                    <mat-icon>add</mat-icon>
+                                  </button></span> -->
+                                  <i class="fa fa-clipboard fa-1x mr-1" aria-hidden="true"></i> {{q.text}}<span class="ml-2"><button  type="button" mat-button color="accent" style="border-radius: 7px;" (click)="selectQuestion(i)"><i class="fa fa-plus-square fa-2x" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit question" aria-hidden="true"></i></button> <button  type="button" mat-button color="accent" style="border-radius: 7px;" (click)="removeQuestion(i)"><i class="fa fa-minus-circle fa-2x ml-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove question" aria-hidden="true"></i></button></span>
+                                 
+
+                         
+                          <hr/>
+                      </div>
+                 
+                  </mat-list-item>
+              </mat-list>
+         
+      </div>
+    </div>
+  </div>
+
+</div>

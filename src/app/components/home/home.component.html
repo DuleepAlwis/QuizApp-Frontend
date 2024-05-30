@@ -1,0 +1,36 @@
+    <div class="login-outer">
+        <div class="login-inner">
+            <div class="app-title"><a routerLink="/quizapp"><img src="assets/images/appicon_64.png" style="width:50px;height:50px;border-radius: 7px;"/></a>  {{app_name}}<small> ({{app_sub_name}})</small></div>
+            <hr>
+
+            <!--
+            <form [formGroup]="login_form" (ngSubmit)="login()">
+                <span style="margin-left:90px;font-size: 25px;"><img src="assets/images/user1.png" style="width:50px;height:50px;border-radius: 17px;"/> Login</span>
+                <table class="form-table-1">
+                    <tr><td class="td-label">Email</td><td class="td-text"><input type="email" class="form-control" formControlName="email" required/></td></tr>
+                    <tr><td class="td-label">Password</td><td class="td-text"><input type="password" class="form-control" formControlName="password" required/></td></tr>
+
+                </table>
+                <span class="mt-5 ml-5"><input type="submit" class="btn btn-primary mr-5 ml-5" value="Login"/><input type="reset" class="btn btn-primary ml-5" value="Cancel"/></span>
+                <div style="font-size: 17px"><a class="mr-5 ml-5" routerLink="/create_account">Create an account</a><a class="" routerLink="/reset_password">Forgot password?</a></div>
+            </form>
+        -->
+      <form class="log_form" [formGroup]="login_form" (ngSubmit)="login()">
+            <mat-form-field style="width: 100%;">
+                <mat-label>Email</mat-label>
+
+                <input matInput type="email" formControlName="email" required/>
+            </mat-form-field>
+
+            <mat-form-field style="width: 100%;">
+                <mat-label>Password</mat-label>
+
+                <input matInput  type="password" formControlName="password" required/>
+            </mat-form-field>
+            <span class="ml-5"><button mat-raised-button  color="primary" type="submit" class="mr-5 ml-5">Login</button><button mat-raised-button  color="primary" type="reset" class="ml-5">Cancel</button></span>
+            <div style="font-size: 11px"><a class="mr-5 ml-5" routerLink="/create_account">Create an account</a><a class="" routerLink="/reset_password">Forgot password?</a></div>
+        </form>
+     
+
+        </div>
+    </div>

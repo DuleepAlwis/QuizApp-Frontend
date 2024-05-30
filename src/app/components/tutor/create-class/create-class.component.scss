@@ -1,0 +1,114 @@
+
+
+.class-view{
+    width:50%;
+    height:80%;
+    border-radius: 7px;
+  
+    padding: 10px;
+    position: absolute;
+    margin-left:55px
+
+
+}
+
+.class-form{
+    background-color: lavenderblush;
+    width:75%;
+    height:100%;
+    border-radius: 7px;
+    border-color: lightslategray;
+}
+
+.class-card{
+    width:25%;
+    height:30%;
+    float:left;
+    display: inline;
+    position: relative;
+    
+    
+}
+
+.side-list-view{
+    width:45%;
+    height:75%;
+    
+  right: 10px;
+  position: absolute;
+    
+}
+
+
+
+.example-full-width{
+    width:100%
+}
+
+.form_outer{
+
+    border-style:inset;
+   
+    display: inline-block;
+    width:100%;
+    height:55%;
+    background-color: #000080	;
+    border-color: #191970;
+    color:white;
+   border-width: 7px;
+    border-radius: 7px;
+   
+
+}
+
+.form_inner{
+     width: 50%;
+     height:100%;
+     margin:5px 5px 10px 10px;
+   
+    display: flex;
+    float:left;
+    position: relative; 
+}
+
+.form_inner mat-label{
+    color:white;
+}
+
+.class_indicators{
+    display: flex;
+    width: 40%;
+    height:100%;
+    margin:10px 50px 10px 10px;
+    
+}
+
+.quiz_list{
+    display: flex;
+    width: 40%;
+    height:60%;
+    float: right;
+   
+    
+}
+
+.quiz_list_outer{
+    width:100%;
+    margin:0px;
+    height:100%;
+    margin-top:10px;
+   
+}
+
+.quiz_list_inner{
+    width:100%;
+    margin:0px;
+    height:100%;
+   
+    overflow-y: scroll;
+}
+
+.bottom_area{
+    position: absolute; 
+    bottom: 60px; 
+}

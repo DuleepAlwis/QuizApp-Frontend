@@ -1,0 +1,32 @@
+<div class="class-rooms-outer">
+  <span> <i class="fa fa-clipboard fa-2x mr-1 ml-1 mt-1" aria-hidden="true"></i>Add {{entity_name}} from here</span>
+  <div>
+
+  </div>
+  <div class="class-rooms-inner">
+
+      <hr />
+   
+          <mat-list role="list">
+
+              <mat-list-item role="listitem" *ngFor="let q of quizList">
+                  <div style="width:100%;margin:5px;height:100%;padding: 3px;color:white">
+                     
+                      <i *ngIf="entity_name=='Quizzes'" class="fa fa-clipboard fa-1x mr-1" aria-hidden="true"></i>{{q.name}} quiz has {{q.number_of_question}} questions with {{q.studentList ==null ?0:q.studentList.length}} students<span class="ml-2"><button  mat-button color="accent" style="border-radius: 7px;"><i class="fa fa-plus-square fa-1x" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to the class" aria-hidden="true"></i></button></span>
+                      <!-- <span class="ml-2"><i class="fa fa-clipboard fa-1x mr-1" aria-hidden="true"></i>
+                      {{q.name}} quiz has {{q.number_of_question}} questions with {{q.studentList ==null ?0:q.studentList.length}} students
+                    </span> 
+                          <span class="ml-2">
+                            <button mat-mini-fab color="accent" aria-label="Add quiz to the class">
+                                <mat-icon>add</mat-icon>
+                              </button></span> -->
+                     
+                     
+                      <hr/>
+                  </div>
+             
+              </mat-list-item>
+          </mat-list>
+     
+  </div>
+</div>

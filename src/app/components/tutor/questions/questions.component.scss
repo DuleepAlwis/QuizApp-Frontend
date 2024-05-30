@@ -1,0 +1,162 @@
+
+
+.class-view{
+    width:50%;
+    height:100%;
+    border-radius: 7px;
+  
+    padding: 10px;
+    position: absolute;
+    margin-left:55px
+
+
+}
+
+.class-form{
+    background-color: lavenderblush;
+  
+    width:75%;
+    height:100%;
+    border-radius: 7px;
+    border-color: lightslategray;
+}
+
+.class-card{
+    width:25%;
+    height:30%;
+    float:left;
+    display: inline;
+    position: relative;
+    
+    
+}
+
+.side-list-view{
+    width:45%;
+    height:75%;
+    
+  right: 10px;
+  position: absolute;
+    
+}
+
+
+
+.example-full-width{
+    width:100%
+}
+
+.form_outer{
+
+    border-style:dotted;
+   
+    display: inline-block;
+    width:100%;
+    height:65%;
+    //background-color: #DAE8FC;
+   border-width: 7px;
+    border-radius: 7px;
+    background-color: #000080	;
+    color:white;
+    border-color: #191970;
+}
+
+.form_inner{
+     width: 50%;
+     height:100%;
+     margin:5px 5px 10px 10px;
+   
+    display: flex;
+    float:left;
+    position: relative; 
+    color:white;
+}
+
+.form_inner mat-label{
+    color:white;
+}
+
+
+.class_indicators{
+    display: flex;
+    width: 40%;
+    height:100%;
+    margin:10px 50px 10px 10px;
+    
+}
+
+.quiz_list{
+    display: flex;
+    width: 40%;
+    height:60%;
+    float: right;
+   
+    
+}
+
+.quiz_list_outer{
+    width:100%;
+    margin:0px;
+    height:100%;
+    margin-top:10px;
+   
+}
+
+.quiz_list_inner{
+    width:100%;
+    margin:0px;
+    height:100%;
+   
+    overflow-y: scroll;
+}
+
+.bottom_area{
+    position: absolute; 
+    bottom: 60px; 
+}
+
+.answer_box{
+    width:750px;
+    height:250px;
+    border-style: groove;
+    margin-bottom: 7px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.answer-list{
+    width:100%;
+    height:100%;
+    overflow-y: scroll;
+}
+
+.class-rooms-outer{
+    border-radius: 7px;
+    // border-color: #004C99;
+    
+    border-style: none;
+    margin-right:0px ;
+    width:75%;
+    height:550px;
+    background-color: #000080	;
+    color:white;
+    overflow-y: scroll;
+    position: absolute;
+    right:0px;
+  }
+  
+  .class-rooms-inner{
+    border-radius: 7px;
+    // border-color: blue;
+    margin-right:0px ;
+    width:100%;
+    height:99%;
+    color:white;
+    
+  }
+  
+  .class-rooms-inner li{
+    list-style: none;
+    width:100%;
+    margin-bottom: 5px;
+  }

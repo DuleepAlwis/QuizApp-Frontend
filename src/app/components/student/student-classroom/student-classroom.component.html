@@ -1,0 +1,23 @@
+<div class="class-rooms-outer">
+    <span> <i class="fa fa-home fa-2x mr-1" aria-hidden="true"></i>Class Rooms</span>
+    <div>
+
+    </div>
+    <div class="class-rooms-inner">
+
+        <hr />
+     
+            <mat-list role="list">
+
+                <mat-list-item role="listitem" *ngFor="let classRoom of classRoomArr">
+                    <div style="width:100%;margin:0px;height:55px">
+                       
+                        <i class="fa fa-home fa-1x mr-1" aria-hidden="true"></i>{{classRoom}} <span class="ml-2"><i class="fa fa-sign-in fa-1x" data-bs-toggle="tooltip" data-bs-placement="top" title="Join" aria-hidden="true"></i></span>
+                    <hr/>
+                    </div>
+               
+                </mat-list-item>
+            </mat-list>
+       
+    </div>
+</div>

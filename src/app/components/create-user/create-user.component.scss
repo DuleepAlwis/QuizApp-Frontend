@@ -1,0 +1,51 @@
+.homebg-color {
+    background-color: #000080;
+  }
+
+.login-outer{
+
+    // margin:0 auto;
+     width:550px;
+     height:350px;
+     position: fixed;
+     top: 40%;
+     left: 50%;
+     margin-top: -30px;
+     margin-left: -200px;
+       padding: 10px;
+     padding: 10px;
+ 
+     
+ }
+ 
+ .login-inner{
+ 
+     background-color: #B1DDF0;
+     border-radius: 7px;
+     padding: 10px;
+     width: 100%;
+ 
+ }
+ 
+ .form-table-1{
+     border-collapse:separate;
+     border-spacing:0 5px;
+     width:100%;
+ }
+ 
+ 
+ 
+ .td-label{
+     text-align: left;
+     width:40%;
+     margin-left: 27px;
+ }
+ 
+ .td-text{
+     text-align:left;
+     width:50%
+ }
+ 
+.form-field-width{
+    width:100%
+}

@@ -1,0 +1,18 @@
+<app-tutor-nav></app-tutor-nav>
+<div class="container-fluid">
+  <div style="margin-left:15%;margin-top:20px;margin-bottom: 20px;">
+  <span><a style="color:black;text-decoration: none;" routerLink="/create-class/newClass"><button mat-raised-button color="primary">New Class</button></a></span>
+  </div>
+  <div class="class-view">
+    <div *ngFor="let cls of classArr" class="class-card">
+      <app-quiz-class [role]="role" [type]="type" [score]="cls.score" [entity_name]="cls.name" [entity_id]="cls.id"></app-quiz-class>
+    </div>
+    <!-- <div class="pagination-numbers">
+      <button *ngFor="let btn of number_of_btn">{{btn}}</button>
+    </div> -->
+  </div>
+  <div class="side-list-view">
+    <app-student-classroom></app-student-classroom>
+  </div>
+  
+</div>

@@ -1,0 +1,83 @@
+nav{
+    height:80px;
+    background-color:#7EA6E0;
+}
+
+// .body{
+//     background-color:#DAE8FC;
+// }
+
+.nav-app-icon{
+
+    border-radius: 7px;
+    border-color: lightseagreen;
+}
+
+.dropdown-menu{
+    min-width: 9rem;
+    background-color: #7EA6E0;
+}
+
+.dropdown-item:hover .dropdown-item{
+    background-color: lightskyblue;
+}
+
+
+.dropdown-toggle::after {
+ border-top:0em;
+}
+
+.class-view{
+    width:75%;
+    height:80%;
+    border-radius: 7px;
+    border-color: dodgerblue;
+    background-color: cornflowerblue;
+    border-style:outset;
+    padding: 10px;
+    position: absolute;
+
+
+}
+
+.class-card{
+    width:25%;
+    height:30%;
+    float:left;
+    display: inline;
+    position: relative;
+    
+    
+}
+
+.side-list-view{
+    float:right;
+    width:15%;
+    height:75%;
+    bottom: 0;
+  right: 0;
+  position: absolute;
+    
+}
+
+.pagination-numbers{
+    margin-left: calc(35%);
+  margin-right: calc(35%);
+    border-style: outset;
+    border-color: black;
+   /* margin:0px 550px 0px 550px;*/
+    vertical-align:middle;
+    padding:7px;
+    border-radius:7px;
+    display:inline-block;
+    background-color: darkslategrey;
+    
+}
+
+.pagination-numbers button{
+    border-color: darkslategray;
+    background-color: lightslategrey;
+    border-style: outset;
+    border-width: 3px;
+    font-size: 17px;
+}
